@@ -10,7 +10,7 @@ class Search extends React.Component {
     render() {
         return (
             <View style={styles.main_container}>
-                <TextInput style={ styles.textinput } placeholder="Titre du film"/>
+                <TextInput style={styles.textinput} placeholder="Titre du film"/>
                 <Button title="Rechercher" onPress={() => {}}/>
                 <FlatList
                     data={films}
@@ -28,7 +28,12 @@ const styles = StyleSheet.create({
         marginTop:20
     },
     textinput: {
-        backgroundColor: Colors.light,
+        marginLeft: 5,
+        marginRight: 5,
+        height: 50,
+        borderColor: '#000000',
+        borderWidth: 1,
+        paddingLeft: 5
     }
 });
 
