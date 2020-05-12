@@ -7,5 +7,6 @@ Start application in present directory :
 In a new console :   
 `$ npx react-native run-android`
 
-
-[Lien documentation de React Native](https://facebook.github.io/react-native/docs/components-and-apis.html#basic-components)
+## Links
+[List Components](https://facebook.github.io/react-native/docs/components-and-apis.html#basic-components)
+[List Props](https://reactnative.dev/docs/text.html#props)
