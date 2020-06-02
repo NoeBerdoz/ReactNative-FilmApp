@@ -5,6 +5,7 @@ import FilmItem from './FilmItem'
 
 import {Colors} from 'react-native/Libraries/NewAppScreen'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
+import FilmDetail from './FilmDetail';
 
 class Search extends React.Component {
 
@@ -61,6 +62,11 @@ class Search extends React.Component {
 
     }
 
+    _displayDetailForFilm = (idFilm) => {
+        console.log("display film with id " + idFilm);
+        this.props.navigation.navigate("FilmDetail", { idFilm: idFilm })
+    }
+
     render() {
         return (
             <View style={styles.main_container}>
@@ -76,7 +82,7 @@ class Search extends React.Component {
                         }
                         console.log("onEndReached")
                     }}
-                    renderItem={({item}) => <FilmItem film={item}/>}
+                    renderItem={({item}) => <FilmItem film={item} displayDetailForFilm={this._displayDetailForFilm}/>}
                 />
                 {this._displayLoading()}
             </View>
@@ -87,7 +93,6 @@ class Search extends React.Component {
 const styles = StyleSheet.create({
     main_container: {
         flex: 1,
-        marginTop:20
     },
     textinput: {
         marginLeft: 5,
